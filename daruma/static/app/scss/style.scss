@@ -453,4 +453,14 @@ footer {
     width: 100%;
     display: block;
   }
+
+  .column-4 {
+    width: 50%;
+    padding: 0 0.1em;
+
+    .logo {
+      margin: 0 auto;
+      max-width: 9em;
+    }
+  }
 }
