@@ -1,5 +1,5 @@
-# Daruma
-Daruma is a lightweight CMS and blogging app on Django.
+# Kaktusy
+Kaktusy is a demo site for the [Daruma CMS](https://github.com/rzeczuchy/daruma). 
 
 ## Starting app using Pipenv
 To start the app you'll need [Pipenv](https://pypi.org/project/pipenv/).
