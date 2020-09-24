@@ -1,0 +1,39 @@
+{% extends 'app/shared.html' %} {% block content %}
+<section class="hero-short">
+  <div class="flex-short">
+    <div class="fluid-container">
+      <div class="hero-text">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+          {{ post.title }}
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="250"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
+          {{ post.published_time }} by {{ post.author }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="fluid-container">
+    <div class="post-detail">
+      <h1 class="post-title">{{ post.title }}</h1>
+
+      <p class="post-signature">
+        {{ post.published_time }} by {{ post.author }}
+      </p>
+
+      <div class="post-content">
+        <p>{{ post.main_content|safe }}</p>
+      </div>
+
+      <a href="{% url 'app:blog' %}">Back to Blog</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

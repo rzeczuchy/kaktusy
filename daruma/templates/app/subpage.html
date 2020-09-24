@@ -1,0 +1,32 @@
+{% extends 'app/shared.html' %} {% block content %}
+<section class="hero-short">
+  <div class="flex-short">
+    <div class="fluid-container">
+      <div class="hero-text">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+          {{ pobject.hero_title }}
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="250"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
+          {{ pobject.hero_subtitle }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+    <div class="fluid-container">
+      <div class="post-detail">
+        <div class="post-content">
+          <p>{{ pobject.content|safe }}</p>
+        </div>
+        <a href="{% url 'app:index' %}">Back to Home</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

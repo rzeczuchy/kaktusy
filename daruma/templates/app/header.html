@@ -1,0 +1,10 @@
+<nav>
+  <div class="fluid-container">
+      <div class="brand"><a href="{% url 'app:index' %}">{{ cdetail.name }}</a></div>
+      <ul class="navbar">
+        <li class="underline-link"><a href="{% url 'app:team' %}">Team</a></li>
+        <li class="underline-link"><a href="{% url 'app:blog' %}">Blog</a></li>
+        <li class="underline-link"><a href="{% url 'app:index' %}#contact">Contact</a></li>
+      </ul>
+  </div>
+</nav>

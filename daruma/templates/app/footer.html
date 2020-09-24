@@ -1,0 +1,40 @@
+<section>
+  <div class="short-flex">
+    <div class="fluid-container">
+      <div class="row">
+        <div class="column-3">
+          <strong>Site</strong>
+          <hr />
+          <ul>
+            <li class="animated-link"><a href="{% url 'app:team' %}">Team</a></li>
+            <li class="animated-link"><a href="{% url 'app:blog' %}">Blog</a></li>
+            <li class="animated-link"><a href="{% url 'app:index' %}#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="column-3">
+          <strong>Legal</strong>
+          <hr />
+          <ul>
+            <li class="animated-link"><a href="{% url 'app:privacy' %}">Privacy policy</a></li>
+            <li class="animated-link"><a href="{% url 'app:terms' %}">Terms of service</a></li>
+            <li class="animated-link"><a href="{% url 'app:disclaimer' %}">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="column-3">
+          {% if cdetail %}
+          <strong>{{ cdetail.full_name }}</strong>
+          <hr />
+          <ul>
+            <li>{{ cdetail.address_1 }}</li>
+            <li>{{ cdetail.address_2 }}</li>
+            <li>Tel. {{ cdetail.telephone }}</li>
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="credit">
+    <p>Based on <span class="animated-link"><a href="https://github.com/rzeczuchy/daruma" target="_blank" rel="noopener">Daruma</a></span> | Created by <span class="animated-link"><a href="https://github.com/rzeczuchy" target="_blank" rel="noopener">Michal</a></span></p>
+  </div>
+</section>

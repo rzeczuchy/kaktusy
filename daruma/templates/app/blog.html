@@ -1,0 +1,76 @@
+{% extends 'app/shared.html' %} {% block content %}
+<section class="hero-short">
+  <div class="flex-short">
+    <div class="fluid-container">
+      <div class="hero-text">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+          {{ blog.hero_title }}
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="250"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
+          {{ blog.hero_subtitle }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="post-list white">
+  <div class="fluid-container">
+    {% if page_obj %} {% for post in page_obj %}
+    <div class="post-item">
+      <h1 class="post-title">
+        <a href="{% url 'app:post-detail' post.pk %}">{{ post.title }}</a>
+      </h1>
+
+      <p class="post-signature">
+        published {{ post.published_time }} by {{ post.author }}
+      </p>
+
+      <div class="post-excerpt">
+        <p>{{ post.excerpt }}</p>
+      </div>
+
+      <a href="{% url 'app:post-detail' post.pk %}">Read post</a>
+    </div>
+    <hr />
+    {% endfor %} {% else %}
+    <p>No posts to display.</p>
+    {% endif %}
+
+    <div class="pagination">
+      {% if page_obj.has_previous %}
+      <a href="?page=1" class="pagination-item">&laquo; First</a>
+      <a
+        href="?page={{ page_obj.previous_page_number }}"
+        class="pagination-item"
+        >Prev</a
+      >
+      {% else %}
+      <span class="pagination-item text-muted">&laquo; First</span>
+      <span class="pagination-item text-muted">Prev</span>
+      {% endif %}
+
+      <span class="pagination-item current">
+        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+      </span>
+
+      {% if page_obj.has_next %}
+      <a href="?page={{ page_obj.next_page_number }}" class="pagination-item"
+        >Next</a
+      >
+      <a href="?page={{ page_obj.paginator.num_pages }}" class="pagination-item"
+        >Last &raquo;</a
+      >
+      {% else %}
+      <span class="pagination-item text-muted">Next</span>
+      <span class="pagination-item text-muted">Last &raquo;</span>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

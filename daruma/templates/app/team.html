@@ -1,0 +1,49 @@
+{% extends 'app/shared.html' %} {% block content %}
+<section class="hero-short">
+  <div class="flex-short">
+    <div class="fluid-container">
+      <div class="hero-text">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+          {{ team.hero_title }}
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="250"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
+          {{ team.hero_subtitle }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white">
+  <div class="flex">
+    <div class="fluid-container">
+      <h2>{{ team.team_title }}</h2>
+
+      {% if tmembers %}
+      <div class="row">
+        {% for person in tmembers %}
+        <div class="column-3">
+          <div class="card">
+            <img src="{{ person.portrait.url }}" alt="Jane" />
+            <div class="card-content">
+              <h2 class="name">{{ person.name }}</h2>
+              <p class="title">{{ person.title }}</p>
+              <p>{{ person.description }}</p>
+              <p>{{ person.email }}</p>
+            </div>
+          </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+      </div>
+
+      <div class="row">{% endif %} {% endfor %}</div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

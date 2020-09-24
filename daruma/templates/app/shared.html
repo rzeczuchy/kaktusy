@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Animate on Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Styles -->
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'app/css/style.css' %}"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'app/favicon.ico' %}"/>
+    <!-- SEO -->
+    {% if pdescription %}
+    <meta name="description" content="{{ pdescription }}">
+    {% endif %}
+    <!-- Title -->
+    <title>
+      {% if ptitle %} {{ ptitle }} {% else %} Page title {% endif %}
+    </title>
+  </head>
+  <body>
+    <header>{% include "app/header.html"%}</header>
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <footer>{% include "app/footer.html" %}</footer>
+
+    <!-- Animate on Scroll scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+      });
+    </script>
+  </body>
+</html>

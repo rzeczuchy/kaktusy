@@ -1,0 +1,19 @@
+{% extends 'app/shared.html' %} {% block content %}
+<section>
+  <div class="fluid-container"></div>
+</section>
+
+
+<section class="white">
+  <div class="flex">
+    <div class="fluid-container">
+      <h2>Page not found</h2>
+      <p>
+        Sorry, the page you were looking for is not here. Click the link below
+        to return to our home page.
+      </p>
+      <a href="{% url 'app:index' %}">Back to Home</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
