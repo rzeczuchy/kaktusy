@@ -38,13 +38,17 @@ python manage.py createsuperuser
 
 ## Notices
 This app makes use of the Django framework for Python:\
-https://github.com/django/django
+https://github.com/django/django \
+See license text at https://github.com/django/django/blob/master/LICENSE
 
 For rich-text editing, the Django CKEditor integration has been used:\
-https://github.com/django-ckeditor/django-ckeditor
+https://github.com/django-ckeditor/django-ckeditor \
+See license text at https://github.com/django-ckeditor/django-ckeditor/blob/master/LICENSE
 
 For storing environment variables, python-dotenv has been used:\
-https://github.com/theskumar/python-dotenv
+https://github.com/theskumar/python-dotenv \
+See license text at https://github.com/theskumar/python-dotenv/blob/master/LICENSE
 
-Placeholder hero photo by verneho on Unsplash:\
-https://unsplash.com/@verneho
+For the cookie pop-up, the Cookie Consent plugin has been used:\
+https://github.com/osano/cookieconsent \
+See license text at https://github.com/osano/cookieconsent/blob/dev/LICENSE

@@ -14,6 +14,12 @@
     />
     <!-- Animate on Scroll CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Cookie Consent CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+    />
     <!-- Styles -->
     {% load static %}
     <link
@@ -22,10 +28,14 @@
       href="{% static 'app/css/style.css' %}"
     />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{% static 'app/favicon.ico' %}"/>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'app/favicon.ico' %}"
+    />
     <!-- SEO -->
     {% if pdescription %}
-    <meta name="description" content="{{ pdescription }}">
+    <meta name="description" content="{{ pdescription }}" />
     {% endif %}
     <!-- Title -->
     <title>
@@ -47,5 +57,27 @@
         duration: 1000,
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script>
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#005336",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#96b742",
+            "border": "#96b742"
+          }
+        },
+        "position": "bottom-left",
+        "content": {
+          "message": "This website uses cookies to ensure you get the best experience.",
+          "dismiss": "Got it!",
+          "link": "What are cookies?"
+        }
+      });
+      </script>
   </body>
 </html>
