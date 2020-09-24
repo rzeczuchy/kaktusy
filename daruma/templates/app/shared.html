@@ -1,3 +1,21 @@
+<!--
+NOTICE:
+Daruma is copyright (c) 2020, Michal Jagielnicki
+See license text at https://github.com/rzeczuchy/daruma/blob/master/LICENSE
+
+Django is copyright (c) Django Software Foundation and individual contributors
+See license text at https://github.com/django/django/blob/master/LICENSE
+
+Django CKEditor is copyright (c) Shaun Sephton
+See license text at https://github.com/django-ckeditor/django-ckeditor/blob/master/LICENSE
+
+Python-dotenv is copyright (c) 2014, Saurabh Kumar
+See license text at https://github.com/theskumar/python-dotenv/blob/master/LICENSE
+
+Cookie Consent is copyright (c) 2019 Osano, Inc., A Public Benefit Corporation
+See license text at https://github.com/osano/cookieconsent/blob/dev/LICENSE
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,24 +78,25 @@
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
     <script>
       window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#005336",
-            "text": "#ffffff"
+        palette: {
+          popup: {
+            background: "#005336",
+            text: "#ffffff",
           },
-          "button": {
-            "background": "transparent",
-            "text": "#96b742",
-            "border": "#96b742"
-          }
+          button: {
+            background: "transparent",
+            text: "#96b742",
+            border: "#96b742",
+          },
         },
-        "position": "bottom-left",
-        "content": {
-          "message": "This website uses cookies to ensure you get the best experience.",
-          "dismiss": "Got it!",
-          "link": "What are cookies?"
-        }
+        position: "bottom-left",
+        content: {
+          message:
+            "This website uses cookies to ensure you get the best experience.",
+          dismiss: "Got it!",
+          link: "What are cookies?",
+        },
       });
-      </script>
+    </script>
   </body>
 </html>
